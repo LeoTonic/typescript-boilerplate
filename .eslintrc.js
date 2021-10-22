@@ -24,6 +24,8 @@ module.exports = {
       {
         requireReturnDescription: false,
         requireParamDescription: false,
+        requireParamType: false,
+        requireReturnType: false,
       },
     ],
     'jsdoc/require-jsdoc': [
@@ -42,6 +44,8 @@ module.exports = {
     'jsdoc/check-tag-names': 0,
     'jsdoc/require-returns-description': 0,
     'jsdoc/require-param-description': 0,
+    'jsdoc/require-returns-type': 0,
+    'jsdoc/require-param-type': 0,
     'jsdoc/no-undefined-types': 0,
     'jsdoc/require-returns': 0,
     'max-len': [
