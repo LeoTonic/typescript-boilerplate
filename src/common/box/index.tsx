@@ -1,5 +1,6 @@
 import React, { useMemo, useCallback } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import Button from '@mui/material/Button';
 import { addTask } from '~/store/actions/task';
 
 interface Props {
@@ -30,12 +31,15 @@ const Box = ({ title }: Props): JSX.Element => {
   }, [dispatch]);
 
   return (
-    <div>
-      <div onClick={handleClick}>{title}</div>
+    <React.Fragment>
+      <div>{title}</div>
       {tasks.map((item: ITask) => (
         <div key={item.id}>{item.title}</div>
       ))}
-    </div>
+      <Button variant="contained" onClick={handleClick}>
+        Жмякни меня
+      </Button>
+    </React.Fragment>
   );
 };
 

@@ -7,7 +7,6 @@ import thunk from 'redux-thunk';
 import App from './App';
 import reducer from './store/reducers';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
 
 const store: Store<ApplicationState> = createStore(
   reducer,
@@ -16,7 +15,9 @@ const store: Store<ApplicationState> = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <React.Fragment>
+      <App />
+    </React.Fragment>
   </Provider>,
   document.getElementById('root'),
 );

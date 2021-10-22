@@ -13,10 +13,10 @@ interface Props {
  * @returns {JSX.Element}
  */
 const Link = ({ src = 'Empty name' }: Props): JSX.Element => (
-  <div>
+  <React.Fragment>
     <div>{src}</div>
     <Box title="Inner box" />
-  </div>
+  </React.Fragment>
 );
 
 export default Link;
